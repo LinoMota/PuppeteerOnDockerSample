@@ -1,5 +1,6 @@
 FROM node:12-slim
 
+# This Chrome works :D 
 RUN apt-get update \
     && apt-get install -y wget gnupg \
     && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
@@ -9,7 +10,7 @@ RUN apt-get update \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
-
+# We dont need it
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 
