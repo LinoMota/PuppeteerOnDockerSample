@@ -1,0 +1,12 @@
+version: '3'
+services: 
+    pup-teste:
+        build:
+            dockerfile: Dockerfile
+            context: .
+        image: pup-teste
+        ports:
+            - 3000:3000
+        volumes:
+            - .:/usr/src/app
+        container_name: pup-teste
