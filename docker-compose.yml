@@ -5,8 +5,9 @@ services:
             dockerfile: Dockerfile
             context: .
         image: pup-teste
+        working_dir: /app
         ports:
             - 3000:3000
         volumes:
-            - .:/usr/src/app
+            - .:/app
         container_name: pup-teste
